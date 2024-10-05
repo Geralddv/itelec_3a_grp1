@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profile_bg">
+    android:background="@drawable/profilebg">
+
 
     <TextView
         android:id="@+id/textView"
@@ -25,10 +26,10 @@
         android:layout_marginStart="348dp"
         android:layout_marginTop="28dp"
         android:background="@null"
-        android:contentDescription="@string/profile"
+        android:contentDescription="@string/imgbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_icon" />
+        app:srcCompat="@drawable/profilepic" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -38,7 +39,7 @@
         android:layout_marginTop="128dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_icon" />
+        app:srcCompat="@drawable/profilepic" />
 
     <EditText
         android:id="@+id/name"
@@ -59,7 +60,7 @@
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/studentno"
+        android:text="@string/Studentnum"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/p_email"
+        android:text="@string/email"
         android:textColor="#FFFFFF"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +86,7 @@
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/p_department"
+        android:text="@string/department"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +97,7 @@
         android:id="@+id/editprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/editprofile"
+        android:text="@string/edit"
         android:backgroundTint="#800000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

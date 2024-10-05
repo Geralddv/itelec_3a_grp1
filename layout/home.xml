@@ -5,8 +5,8 @@
     android:id="@+id/home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    tools:context=".home">
+    android:background="@drawable/ubhome"
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btncitec"
@@ -80,54 +80,40 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="85dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/appointment"
+        android:layout_width="183dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/ub"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/btncitec"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btnNotification"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="28dp"
+        android:background="@null"
+        android:contentDescription="@string/imgbutton"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notif" />
+
+    <ImageButton
+        android:id="@+id/btnProfile"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="348dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="838dp"
         android:background="@null"
-        android:contentDescription="@string/profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/imgbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_icon" />
+        app:srcCompat="@drawable/profilepic" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="76dp"
-        android:background="@null"
-        android:contentDescription="@string/notif"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/btncitec"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notif_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
