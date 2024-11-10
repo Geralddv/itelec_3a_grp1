@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENAR Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff;
+            color: #400000;
+        }
+        .navbar {
+            background-color: #800000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #f2f2f2;
+            font-size: 1.5rem;
+            color: #400000;
+        }
+        .container {
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+        }
+        select, input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #800000;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .button:hover {
+            background-color: #990000;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div><strong>CENAR Appointment</strong></div>
+        <div>
+            <a href="#">Notification</a>
+            <a href="#">Profile</a>
+        </div>
+    </div>
+
+    <div class="header">
+        College of Engineering and Architecture
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <label for="professor">Select Professor:</label>
+            <select id="professor" name="professor">
+                <option id="prof1" value="prof1">Dean.</option>
+                <option id="prof2" value="prof2">Ms.</option>
+                <option id="prof3" value="prof3">Mr.</option>
+            </select>
+
+            <label for="purpose">Purpose of Appointment:</label>
+            <select id="purpose" name="purpose">
+                <option id="advising" value="advising">Advising</option>
+                <option id="consultation" value="consultation">Consultation</option>
+                <option id="office_hours" value="office_hours">Office Hours</option>
+                <option id="project_discussion" value="project_discussion">Project Discussion</option>
+                <option id="completion_form" value="completion_form">Completion Form</option>
+                <option id="dean_signiture" value="dean_signiture">Dean's Signiture</option>
+                <option id="program_head_signiture" value="program_head_signiture">Program Head's Signiture</option>
+                <option id="others" value="others">Others</option>
+            </select>
+
+            <label for="date">Set Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Set Time:</label>
+            <input type="time" id="time" name="time">
+
+            <button type="submit" class="button">Submit</button>
+            <br>
+            <button type="submit" class="button">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
