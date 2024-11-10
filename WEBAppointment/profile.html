@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .navbar {
+      background-color: #6e1927;
+      max-width: 100%;
+      padding: 10px 5px;
+    }
+
+    .navbar-logo img {
+      height: 80px;
+      width: auto;
+      margin-left: 15px;
+    }
+
+    .form-container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      background-color: #f2f2f2;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .profile-container {
+      display: flex;
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      margin-bottom: 15px;
+    }
+
+    .profile-container img {
+      max-width: 100px; /* Set a fixed size for the image */
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 10px; /* Space between the image and the button */
+    }
+
+    .file-input-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .file-input-wrapper input[type="file"] {
+      display: none;
+    }
+
+    .file-input-wrapper label {
+      background-color: transparent;
+      color: #6e1927;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+
+    .file-input-wrapper label:hover {
+      color: black; /* Change text color on hover */
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-container button {
+      padding: 10px 20px;
+      background-color: #6e1927;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-container button:hover {
+      background-color: #4b1220;
+    }
+  </style>
+
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+    </nav>
+
+    <div class="form-container-wrapper">
+      <div class="form-container">
+        <h2>Student Profile</h2>
+
+        <!-- Profile Image and Edit Button -->
+        <div class="profile-container">
+          <img id="profile-image" src="user.png" alt="Student Image" />
+          <div class="file-input-wrapper">
+            <input
+              type="file"
+              id="image-upload"
+              name="image-upload"
+              accept="image/*"
+              onchange="previewImage(event)"
+            />
+            <label for="image-upload">Edit</label>
+          </div>
+        </div>
+
+        <form action="#" method="post">
+          <label for="name">Full Name:</label>
+          <label for="student-no">Student Number:</label>
+          <label for="email">Email Address:</label>
+          <label for="department">Department:</label>
+
+          <button type="button" onclick="window.location.href='index.html'">Logout</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function previewImage(event) {
+        const file = event.target.files[0]; // Get the selected file
+        const reader = new FileReader();
+
+        reader.onload = function () {
+          const image = document.getElementById("profile-image");
+          image.src = reader.result; // Update the image source to the selected file
+        };
+
+        if (file) {
+          reader.readAsDataURL(file); // Read the file as a data URL (base64)
+        }
+      }
+    </script>
+  </body>
+</html>

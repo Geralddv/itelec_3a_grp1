@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: maroon;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.navbar .logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+/* Main Content Wrapper */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    background-image: url('homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh - 60px); /* Ensures content is centered even with a fixed navbar */
+}
+
+/* Registration Form Wrapper */
+.wrapper {
+    width: 90%;
+    max-width: 420px;
+    background: maroon;
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Input Box */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: maroon;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Link Text */
+.login-link {
+    font-size: 14.5px;
+    margin-top: 20px;
+}
+
+.login-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-title h1 {
+        font-size: 20px;
+    }
+
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
